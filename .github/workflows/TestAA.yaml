@@ -1,0 +1,24 @@
+name: Math Class tests
+
+on:
+  push
+
+jobs:
+  Atest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo code
+        uses: actions/checkout@v4
+
+      - name: Setup Python Env
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Run additions tests
+        run: python testF.py
