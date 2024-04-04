@@ -9,7 +9,6 @@ def register():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-        print("helloworld")
 
         data = {"name":name, "email":email,"password":password}
 
@@ -20,4 +19,3 @@ def register():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-    
